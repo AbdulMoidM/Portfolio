@@ -1,6 +1,8 @@
 import React from 'react';
 import streetMap from '../assets/img/shortest-path-example.PNG'
 import lstm from '../assets/img/Lstm.PNG'
+import checkers from '../assets/img/checkers.PNG'
+
 
 
 
@@ -8,7 +10,7 @@ export default function SelectedProjects() {
 
   return (
         <React.Fragment>
-        <section className="page-section portfolio" id="portfolio">
+        <section className="page-section portfolio" id="project">
             <div className="container">
                 {// Portfolio Section Heading-->
                 }
@@ -53,7 +55,20 @@ export default function SelectedProjects() {
                         </div>
                     </div>
 
-                    
+                    <div className="col-md-6 col-lg-4 mb-5">
+                        <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div className="portfolio-item-caption-content text-center text-white">
+                                    <img src="https://img.icons8.com/ios/50/000000/connection-status-off.png"/>
+                                </div>
+                            </div>
+                            <h5> AI Checkers </h5>
+                            <img className="img-fluid" style={{height:'17rem'}} src={checkers} alt="AI Checkers"/>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </section>
@@ -89,10 +104,13 @@ export default function SelectedProjects() {
                                     }<img className="img-fluid rounded mb-5" src={streetMap} style={{height:'20%'}} alt="Street Mapping"/>
                                     {// Portfolio Modal - Text-->
                                     }
-                                    <p className="mb-5">
+                                    <p className="mb-1">
                                     Built using Java, this project draws maps of areas provided as txt files using JFrames, and finds shortest paths between two points using Dijkstra's algorithm.
                                     </p>
-                                    <button className="btn btn-primary" href="#" data-dismiss="modal">
+                                    <div>
+                                     <a href="https://github.com/AbdulMoidM/street-Mapping" target="blank">Github Link <br/></a>
+                                     </div>
+                                    <button className="btn btn-primary mt-3" href="#" data-dismiss="modal">
                                         Close Window
                                     </button>
                                 </div>
@@ -102,7 +120,7 @@ export default function SelectedProjects() {
                 </div>
             </div>
         </div>
-        <div className="portfolio-modal modal fade" style={{height:'41rem'}} id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
+        <div className="portfolio-modal modal fade" style={{height:'43rem'}} id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
             <div className="modal-dialog modal-xl" role="document">
                 <div className="modal-content">
                     <button className="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
@@ -116,7 +134,7 @@ export default function SelectedProjects() {
                                 <div className="col-lg-8">
                                     {// Portfolio Modal - Title-->
                                     }
-                                    <h2 className="portfolio-modal-title text-secondary mb-0">
+                                    <h2 style={{fontSize:'170%'}}className="portfolio-modal-title text-secondary mb-0">
                                         Time-series forecasting using LSTM Models for predicting change in US GDP
                                     </h2>
                                     {// Icon Divider-->
@@ -129,13 +147,22 @@ export default function SelectedProjects() {
                                         <div className="divider-custom-line"></div>
                                     </div>
                                     {// Portfolio Modal - Image-->
-                                    }<img className="img-fluid rounded mb-5" src={lstm} style={{height:'20%'}} alt="lstm"/>
+                                    }<img className="img-fluid rounded mb-5" src={lstm} style={{height:'18%'}} alt="lstm"/>
                                     {// Portfolio Modal - Text-->
                                     }
-                                    <p className="mb-5">
-                                    Built using Java, this project draws maps of areas provided as txt files using JFrames, and finds shortest paths between two points using Dijkstra's algorithm.
+                                    <p  className="mb-1">
+                                    This project was to predict the changes in US GDP after the onset of COVID-19.<br/> Keras, an open source neural-network library, was used to train different LSTM models and choose the best performing model based on their average normalized RMSE.
+<br/>For the models' inputs, we acquired stock, US treasury, and GDP data from Quandl and processed it using Python scripts (details & codebase in link).
                                     </p>
-                                    <button className="btn btn-primary" href="#" data-dismiss="modal">
+
+                                    <div>
+                                      <a href="https://medium.com/@amunawar_3973/time-series-multi-step-forecasting-using-lstm-modelling-for-us-gdp-in-times-of-covid-19-f59970c93778" target="blank" >Medium Article <br/></a>
+                                    </div>
+                                    <div>
+                                      <a href="https://github.com/AbdulMoidM/Time-series-multi-step-forecasting-using-LSTM-Modelling-for-US-GDP" target="blank" >Github Link <br/></a>
+                                     </div>
+
+                                    <button className="btn btn-primary mt-3" href="#" data-dismiss="modal">
                                         Close Window
                                     </button>
                                 </div>
@@ -159,7 +186,7 @@ export default function SelectedProjects() {
                                 <div className="col-lg-8">
                                     {// Portfolio Modal - Title-->
                                     }
-                                    <h2 className="portfolio-modal-title text-secondary mb-0">Street Mapping</h2>
+                                    <h2 className="portfolio-modal-title text-secondary mb-0">AI Checkers</h2>
                                     {// Icon Divider-->
                                     }
                                     <div className="divider-custom">
@@ -170,13 +197,16 @@ export default function SelectedProjects() {
                                         <div className="divider-custom-line"></div>
                                     </div>
                                     {// Portfolio Modal - Image-->
-                                    }<img className="img-fluid rounded mb-5" src={streetMap} style={{height:'20%'}} alt="Street Mapping"/>
+                                    }<img className="img-fluid rounded mb-3" src={checkers} style={{height:'30%'}} alt="Street Mapping"/>
                                     {// Portfolio Modal - Text-->
                                     }
-                                    <p className="mb-5">
-                                    Built using Java, this project draws maps of areas provided as txt files using JFrames, and finds shortest paths between two points using Dijkstra's algorithm.
+                                    <p className="mb-1">
+                                    A Checkers game thatI coded with two partners using Java. The games allows users to play against the computer/AI which uses the MINIMAX algorithm with alpha-beta pruning
                                     </p>
-                                    <button className="btn btn-primary" href="#" data-dismiss="modal">
+                                    <div>
+                                     <a href="https://github.com/AbdulMoidM/AI-Checkers-in-Java" target="blank">Github Link <br/></a>
+                                     </div>
+                                    <button className="btn btn-primary mt-5" href="#" data-dismiss="modal">
                                         Close Window
                                     </button>
                                 </div>

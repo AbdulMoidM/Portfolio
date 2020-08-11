@@ -6,7 +6,7 @@ export default function WorkExperience() {
 
   return (
         <React.Fragment>
-        <section className="page-section portfolio" id="portfolio">
+        <section className="page-section portfolio" id="work">
             <div className="container">
                 {// Portfolio Section Heading-->
                 }
@@ -131,7 +131,7 @@ export default function WorkExperience() {
 
 
 
-                    
+
                 </div>
             </div>
         </section>

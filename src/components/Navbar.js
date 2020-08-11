@@ -23,14 +23,26 @@ function Navbar(props) {
                     <li className="nav-item mx-0 mx-lg-1">
                     <Link
                     className="m-2"
-                    to="portfolio"
+                    to="work"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration={500}
                     style={{color:'white'}}
 
-                    ><p className='active'>PORTFOLIO</p></Link>
+                    ><p className='active'>WORK</p></Link>
+                    </li>
+                    <li className="nav-item mx-0 mx-lg-1">
+                    <Link
+                    className="m-2"
+                    to="project"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    style={{color:'white'}}
+
+                    ><p className='active'>PROJECTS</p></Link>
                     </li>
                     <li className="nav-item mx-0 mx-lg-1">
                     <Link
