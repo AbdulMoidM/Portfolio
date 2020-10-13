@@ -47,7 +47,7 @@ return(
                                     </svg>
                                   </div>
                                   <div className="text-muted">Phone</div>
-                                  <div className="lead font-weight-bold">(585) 498-0838</div>
+                                  <div className="lead font-weight-bold">(585) 506-1286</div>
                               </div>
                           </div>
                           <div className="col-lg-4">
